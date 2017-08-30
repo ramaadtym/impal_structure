@@ -1,0 +1,6 @@
+[27-Mar-2017 15:39:29 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/presensi/create.php on line 83
+[27-Mar-2017 15:39:29 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/presensi/create.php on line 102
+[27-Mar-2017 15:39:29 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/presensi/create.php on line 103
+[22-May-2017 09:54:36 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/presensi/index.php on line 74
+[22-May-2017 09:54:36 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/presensi/index.php on line 93
+[22-May-2017 09:54:36 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/presensi/index.php on line 94

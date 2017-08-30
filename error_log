@@ -1,0 +1,6 @@
+[23-Mar-2017 06:06:22 UTC] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'root'@'localhost' (using password: NO) in /home/u5200991/public_html/garuda/koneksi.php on line 9
+[23-Mar-2017 13:06:22 Asia/Jakarta] PHP Warning:  mysqli_query() expects parameter 1 to be mysqli, boolean given in /home/u5200991/public_html/garuda/index.php on line 115
+[23-Mar-2017 13:06:22 Asia/Jakarta] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, null given in /home/u5200991/public_html/garuda/index.php on line 117
+[04-Apr-2017 02:28:29 UTC] PHP Warning:  session_start(): Cannot send session cookie - headers already sent by (output started at /home/u5200991/public_html/garuda/index.php:1) in /home/u5200991/public_html/garuda/index.php on line 2
+[04-Apr-2017 02:28:29 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/u5200991/public_html/garuda/index.php:1) in /home/u5200991/public_html/garuda/index.php on line 2
+[04-Apr-2017 02:29:00 UTC] PHP Warning:  session_start(): Cannot send session cache limiter - headers already sent (output started at /home/u5200991/public_html/garuda/index.php:1) in /home/u5200991/public_html/garuda/index.php on line 2

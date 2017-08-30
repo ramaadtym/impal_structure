@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - bimasatria@localhost">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="bimasatria">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="cicms"/>
+    <schema id="4" parent="1" name="cilabz"/>
+    <schema id="5" parent="1" name="cobaslide"/>
+    <schema id="6" parent="1" name="information_schema"/>
+    <schema id="7" parent="1" name="kbbi"/>
+    <schema id="8" parent="1" name="latihan_cci"/>
+    <schema id="9" parent="1" name="mahasiswa"/>
+    <schema id="10" parent="1" name="mysql"/>
+    <schema id="11" parent="1" name="performance_schema"/>
+    <schema id="12" parent="1" name="phpmyadmin"/>
+    <schema id="13" parent="1" name="test"/>
+    <schema id="14" parent="1" name="wordpress"/>
+    <table id="15" parent="2" name="absensi"/>
+    <table id="16" parent="2" name="detil_user"/>
+    <table id="17" parent="2" name="kelas"/>
+    <table id="18" parent="2" name="matkul"/>
+    <table id="19" parent="2" name="registrasi"/>
+    <table id="20" parent="2" name="tutor"/>
+    <table id="21" parent="2" name="user"/>
+    <column id="22" parent="15" name="id_absensi">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="23" parent="15" name="kode_kelas">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="24" parent="15" name="kode_matkul">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="25" parent="15" name="kode_tutor">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="15" name="img_absen">
+      <Position>5</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="27" parent="15" name="status_pertemuan">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="28" parent="15" name="tanggal">
+      <Position>7</Position>
+      <DataType>varchar(100)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="29" parent="15" name="tempat">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="30" parent="15" name="dokumentasi">
+      <Position>9</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="31" parent="15" name="waktu_mulai">
+      <Position>10</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="32" parent="15" name="waktu_selesai">
+      <Position>11</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="15" name="catatan">
+      <Position>12</Position>
+      <DataType>text|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="15" name="time_submit">
+      <Position>13</Position>
+      <DataType>datetime|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="15" name="time_acc">
+      <Position>14</Position>
+      <DataType>datetime|0</DataType>
+    </column>
+    <column id="36" parent="15" name="status_acc">
+      <Position>15</Position>
+      <DataType>varchar(20)|0</DataType>
+      <NotNull>1</NotNull>
+      <DefaultExpression>&apos;Belum Diverifikasi&apos;</DefaultExpression>
+    </column>
+    <column id="37" parent="15" name="admin_acc">
+      <Position>16</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <index id="38" parent="15" name="fk_absensi_kelas">
+      <ColNames>kode_kelas</ColNames>
+    </index>
+    <key id="39" parent="15" name="PRIMARY">
+      <ColNames>id_absensi</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="40" parent="15" name="fk_absensi_kelas">
+      <ColNames>kode_kelas</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>kelas</RefTableName>
+      <RefColNames>kode_kelas</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="41" parent="16" name="nim">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="42" parent="16" name="nama">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="43" parent="16" name="jeniskelamin">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="44" parent="16" name="tgl_lahir">
+      <Position>4</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="45" parent="16" name="fakultas">
+      <Position>5</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="46" parent="16" name="jurusan">
+      <Position>6</Position>
+      <DataType>varchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="47" parent="16" name="kelas">
+      <Position>7</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="48" parent="16" name="id_line">
+      <Position>8</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="49" parent="16" name="telepon">
+      <Position>9</Position>
+      <DataType>varchar(13)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="50" parent="16" name="fk_nim">
+      <ColNames>nim</ColNames>
+    </index>
+    <foreign-key id="51" parent="16" name="fk_nim">
+      <ColNames>nim</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>nim</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="52" parent="17" name="kode_kelas">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="53" parent="17" name="kode_matkul">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="54" parent="17" name="kode_tutor">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="55" parent="17" name="hari">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="56" parent="17" name="jam">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="57" parent="17" name="fk_kelas_matkul">
+      <ColNames>kode_matkul</ColNames>
+    </index>
+    <index id="58" parent="17" name="fk_kelas_tutor">
+      <ColNames>kode_tutor</ColNames>
+    </index>
+    <key id="59" parent="17" name="PRIMARY">
+      <ColNames>kode_kelas</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="60" parent="17" name="fk_kelas_matkul">
+      <ColNames>kode_matkul</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>matkul</RefTableName>
+      <RefColNames>kode_matkul</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="61" parent="17" name="fk_kelas_tutor">
+      <ColNames>kode_tutor</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>tutor</RefTableName>
+      <RefColNames>kode_tutor</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="62" parent="18" name="kode_matkul">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="63" parent="18" name="nama_matkul">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="64" parent="18" name="PRIMARY">
+      <ColNames>kode_matkul</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="65" parent="19" name="id_registrasi">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="66" parent="19" name="nim">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="67" parent="19" name="kode_matkul">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="68" parent="19" name="kode_kelas">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="69" parent="19" name="paket">
+      <Position>5</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="70" parent="19" name="fk_registrasi_kelas">
+      <ColNames>kode_kelas</ColNames>
+    </index>
+    <index id="71" parent="19" name="fk_registrasi_matkul">
+      <ColNames>kode_matkul</ColNames>
+    </index>
+    <index id="72" parent="19" name="fk_registrasi_nim">
+      <ColNames>nim</ColNames>
+    </index>
+    <key id="73" parent="19" name="PRIMARY">
+      <ColNames>id_registrasi</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="74" parent="19" name="fk_registrasi_nim">
+      <ColNames>nim</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>nim</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="75" parent="19" name="fk_registrasi_matkul">
+      <ColNames>kode_matkul</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>matkul</RefTableName>
+      <RefColNames>kode_matkul</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="76" parent="19" name="fk_registrasi_kelas">
+      <ColNames>kode_kelas</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>kelas</RefTableName>
+      <RefColNames>kode_kelas</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="77" parent="20" name="kode_tutor">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="78" parent="20" name="nim">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+    </column>
+    <column id="79" parent="20" name="matkul1">
+      <Position>3</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="80" parent="20" name="matkul2">
+      <Position>4</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <index id="81" parent="20" name="fk_nim_tutor">
+      <ColNames>nim</ColNames>
+    </index>
+    <index id="82" parent="20" name="fk_tutor_matkul1">
+      <ColNames>matkul1</ColNames>
+    </index>
+    <index id="83" parent="20" name="fk_tutor_matkul2">
+      <ColNames>matkul2</ColNames>
+    </index>
+    <key id="84" parent="20" name="PRIMARY">
+      <ColNames>kode_tutor</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="85" parent="20" name="fk_nim_tutor">
+      <ColNames>nim</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>user</RefTableName>
+      <RefColNames>nim</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="86" parent="20" name="fk_tutor_matkul1">
+      <ColNames>matkul1</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>matkul</RefTableName>
+      <RefColNames>kode_matkul</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <foreign-key id="87" parent="20" name="fk_tutor_matkul2">
+      <ColNames>matkul2</ColNames>
+      <RefSchemaName>bimasatria</RefSchemaName>
+      <RefTableName>matkul</RefTableName>
+      <RefColNames>kode_matkul</RefColNames>
+      <OnDelete>delete</OnDelete>
+    </foreign-key>
+    <column id="88" parent="21" name="nim">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="89" parent="21" name="username">
+      <Position>2</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="90" parent="21" name="password">
+      <Position>3</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="91" parent="21" name="email">
+      <Position>4</Position>
+      <DataType>varchar(255)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="21" name="user_level">
+      <Position>5</Position>
+      <DataType>varchar(15)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <key id="93" parent="21" name="PRIMARY">
+      <ColNames>nim</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

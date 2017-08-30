@@ -1,0 +1,25 @@
+[23-Mar-2017 08:28:09 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 08:32:05 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 08:34:10 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 08:40:13 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 10:54:56 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 12:10:19 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[23-Mar-2017 12:15:08 UTC] PHP Warning:  mysqli_real_escape_string() expects exactly 2 parameters, 1 given in /home/u5200991/public_html/garuda/administrator/user/create.php on line 439
+[24-Mar-2017 08:18:07 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 74
+[24-Mar-2017 08:18:07 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/index.php on line 93
+[24-Mar-2017 08:18:07 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 94
+[28-Mar-2017 09:38:28 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/create.php on line 80
+[28-Mar-2017 09:38:28 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/create.php on line 99
+[28-Mar-2017 09:38:28 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/create.php on line 100
+[01-Apr-2017 16:47:41 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 99
+[01-Apr-2017 16:47:41 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 118
+[01-Apr-2017 16:47:41 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 119
+[02-Apr-2017 10:28:56 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 99
+[02-Apr-2017 10:28:56 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 118
+[02-Apr-2017 10:28:56 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/edit.php on line 119
+[04-Apr-2017 02:38:09 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 74
+[04-Apr-2017 02:38:09 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/index.php on line 93
+[04-Apr-2017 02:38:09 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 94
+[04-Apr-2017 06:54:54 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 74
+[04-Apr-2017 06:54:54 UTC] PHP Notice:  Undefined index: nama in /home/u5200991/public_html/garuda/administrator/user/index.php on line 93
+[04-Apr-2017 06:54:54 UTC] PHP Notice:  Undefined index: user_level in /home/u5200991/public_html/garuda/administrator/user/index.php on line 94
