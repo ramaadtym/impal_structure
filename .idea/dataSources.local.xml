@@ -9,7 +9,9 @@
       <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
+      <introspection-schemas>*:bimasatria</introspection-schemas>
       <resolve-scope>bimasatria:</resolve-scope>
+      <unqualified-resolve-schemas>bimasatria:</unqualified-resolve-schemas>
     </data-source>
   </component>
 </project>
