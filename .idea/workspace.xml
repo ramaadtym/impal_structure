@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e668bda-60d7-4b53-b840-028ee52c5f36" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/fungsi/pendaftaran.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/enjoy.iml" afterPath="$PROJECT_DIR$/.idea/enjoy.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/koneksi.php" afterPath="$PROJECT_DIR$/koneksi.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mahasiswa/index.php" afterPath="$PROJECT_DIR$/mahasiswa/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fungsi/pendaftaran.php" afterPath="$PROJECT_DIR$/fungsi/pendaftaran.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,38 +47,13 @@
       <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="984">
-              <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+            <state relative-caret-position="238">
+              <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
               <folding>
-                <marker date="1505163218806" expanded="true" signature="478:748" ph="SELECT u.use... user" />
-                <marker date="1505163218806" expanded="true" signature="916:960" ph="/*...*/" />
-                <marker date="1505163218806" expanded="true" signature="1377:1458" ph="UPDATE user " />
-                <marker date="1505163218806" expanded="true" signature="1854:1949" ph="SELECT kode_... tutor" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logout.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/logout.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/mahasiswa/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="77" column="52" lean-forward="true" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
-              <folding>
-                <marker date="1505163140066" expanded="true" signature="6340:6370" ph="SELECT kode_... matkul" />
-                <marker date="1505163140066" expanded="true" signature="6415:6443" ph="SELECT kode_... kelas" />
-                <marker date="1505163140066" expanded="true" signature="6492:6541" ph="SELECT nim F... user" />
-                <marker date="1505163140066" expanded="true" signature="6586:6614" ph="SELECT kode_... tutor" />
+                <marker date="1505163385372" expanded="true" signature="478:748" ph="SELECT u.use... user" />
+                <marker date="1505163385372" expanded="true" signature="916:955" ph="/*...*/" />
+                <marker date="1505163385372" expanded="true" signature="1373:1454" ph="UPDATE user " />
+                <marker date="1505163385372" expanded="true" signature="1850:1945" ph="SELECT kode_... tutor" />
               </folding>
             </state>
           </provider>
@@ -371,12 +339,12 @@
       <workItem from="1490070640225" duration="4943000" />
       <workItem from="1490079581104" duration="659000" />
       <workItem from="1505138903294" duration="1230000" />
-      <workItem from="1505160757479" duration="2472000" />
+      <workItem from="1505160757479" duration="2616000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187991000" />
+    <option name="totallyTimeSpent" value="188135000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1380" height="754" extended-state="0" />
@@ -754,14 +722,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/logout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="3" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mahasiswa/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -775,15 +735,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/logout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="2" lean-forward="true" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="984">
-          <caret line="59" column="5" lean-forward="true" selection-start-line="59" selection-start-column="5" selection-end-line="59" selection-end-column="5" />
+        <state relative-caret-position="238">
+          <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
           <folding>
-            <marker date="1505163218806" expanded="true" signature="478:748" ph="SELECT u.use... user" />
-            <marker date="1505163218806" expanded="true" signature="916:960" ph="/*...*/" />
-            <marker date="1505163218806" expanded="true" signature="1377:1458" ph="UPDATE user " />
-            <marker date="1505163218806" expanded="true" signature="1854:1949" ph="SELECT kode_... tutor" />
+            <marker date="1505163385372" expanded="true" signature="478:748" ph="SELECT u.use... user" />
+            <marker date="1505163385372" expanded="true" signature="916:955" ph="/*...*/" />
+            <marker date="1505163385372" expanded="true" signature="1373:1454" ph="UPDATE user " />
+            <marker date="1505163385372" expanded="true" signature="1850:1945" ph="SELECT kode_... tutor" />
           </folding>
         </state>
       </provider>

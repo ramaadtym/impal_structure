@@ -21,7 +21,7 @@
             $query = mysqli_query($connect, $sql);
 
             if (mysqli_num_rows($query) == 0) {
-                echo '<script>alert("Username/Password Salah!"); /*window.location.href = \'../index.php\';*/</script>';
+                echo '<script>alert("Username/Password Salah!"); window.location.href = \'../index.php\';</script>';
             } else {
                 $user = mysqli_fetch_assoc($query);
 
