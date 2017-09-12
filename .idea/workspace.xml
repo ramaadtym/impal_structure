@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e668bda-60d7-4b53-b840-028ee52c5f36" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fungsi/pendaftaran.php" afterPath="$PROJECT_DIR$/fungsi/pendaftaran.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -24,36 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="koneksi.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="koneksi.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/koneksi.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="321">
-              <caret line="54" column="66" lean-forward="false" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+            <state relative-caret-position="372">
+              <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
               <folding>
-                <marker date="1505163385372" expanded="true" signature="478:748" ph="SELECT u.use... user" />
-                <marker date="1505163385372" expanded="true" signature="916:955" ph="/*...*/" />
-                <marker date="1505163385372" expanded="true" signature="1373:1454" ph="UPDATE user " />
-                <marker date="1505163385372" expanded="true" signature="1850:1945" ph="SELECT kode_... tutor" />
+                <marker date="1505223442889" expanded="true" signature="478:748" ph="SELECT u.use... user" />
+                <marker date="1505223442889" expanded="true" signature="916:955" ph="/*...*/" />
+                <marker date="1505223442889" expanded="true" signature="1373:1454" ph="UPDATE user " />
+                <marker date="1505223442889" expanded="true" signature="1743:1838" ph="SELECT kode_... tutor" />
               </folding>
             </state>
           </provider>
@@ -189,8 +180,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -201,7 +192,7 @@
             <path>
               <item name="impal" type="b2602c69:ProjectViewProjectNode" />
               <item name="impal" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="mahasiswa" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="fungsi" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -339,12 +330,13 @@
       <workItem from="1490070640225" duration="4943000" />
       <workItem from="1490079581104" duration="659000" />
       <workItem from="1505138903294" duration="1230000" />
-      <workItem from="1505160757479" duration="2616000" />
+      <workItem from="1505160757479" duration="3211000" />
+      <workItem from="1505222946098" duration="546000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188135000" />
+    <option name="totallyTimeSpent" value="189276000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1380" height="754" extended-state="0" />
@@ -706,22 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/koneksi.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="321">
-          <caret line="54" column="66" lean-forward="false" selection-start-line="54" selection-start-column="66" selection-end-line="54" selection-end-column="66" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mahasiswa/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -745,14 +721,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="23" column="65" lean-forward="false" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="65" />
+        <state relative-caret-position="372">
+          <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
           <folding>
-            <marker date="1505163385372" expanded="true" signature="478:748" ph="SELECT u.use... user" />
-            <marker date="1505163385372" expanded="true" signature="916:955" ph="/*...*/" />
-            <marker date="1505163385372" expanded="true" signature="1373:1454" ph="UPDATE user " />
-            <marker date="1505163385372" expanded="true" signature="1850:1945" ph="SELECT kode_... tutor" />
+            <marker date="1505223442889" expanded="true" signature="478:748" ph="SELECT u.use... user" />
+            <marker date="1505223442889" expanded="true" signature="916:955" ph="/*...*/" />
+            <marker date="1505223442889" expanded="true" signature="1373:1454" ph="UPDATE user " />
+            <marker date="1505223442889" expanded="true" signature="1743:1838" ph="SELECT kode_... tutor" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1156">
+          <caret line="68" column="120" lean-forward="true" selection-start-line="68" selection-start-column="120" selection-end-line="68" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/koneksi.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

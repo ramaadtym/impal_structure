@@ -38,8 +38,7 @@
                 $query = mysqli_query($connect, $sql);
 
                 if ($cek_level == "Administrator") {
-                    //header("Location: administrator");
-                    echo '<script>$(\'#sukses\').show();window.location.href=\'administrator\';</script>';
+                   header("Location: ../administrator");
                 } elseif ($cek_level == "Tutor") {
                     $nim = $user['nim'];
                     $sql = "SELECT kode_tutor
@@ -48,8 +47,7 @@
                     $query = mysqli_query($connect, $sql);
                     $tutor = mysqli_fetch_assoc($query);
                     $_SESSION['kode_tutor'] = $tutor['kode_tutor'];
-                    //header("Location: tutor");
-                    echo '<script>$(\'#sukses\').show();window.location.href=\'tutor\';</script>';
+                    header("Location: ../tutor");
                 } elseif ($cek_level == "Mahasiswa") {
                     header("Location: ../mahasiswa");
                 } else {
