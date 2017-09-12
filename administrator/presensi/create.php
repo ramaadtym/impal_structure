@@ -244,7 +244,7 @@
                 }
                 $kelas = mysqli_fetch_array($query);
             ?>
-            <form id="form_advanced_validation" method="POST" enctype="multipart/form-data">
+            <form id="form_advanced_validation" method="POST" action="../../fungsi/pendaftaran.php?addPresensi=tambahpresensi"enctype="multipart/form-data">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -453,70 +453,6 @@
 <?php
     require '../../koneksi.php';
     if (isset($_POST['submit']) && isset($_POST['pernyataan'])) {
-        $kode_kelas = $_POST['kode_kelas'];
-        $kode_matkul = $_POST['kode_matkul'];
-        $kode_tutor = $_POST['kode_tutor'];
-        $status_pertemuan = $_POST['status_pertemuan'];
-        $tanggal = $_POST['tanggal'];
-        $tempat = $_POST['tempat'];
-        $waktu_mulai = $_POST['waktu_mulai'];
-        $waktu_selesai = $_POST['waktu_selesai'];
-        $catatan = $_POST['catatan'];
-        date_default_timezone_set('Asia/Jakarta');
-        $timesubmit = date('Y-m-d H:i:s');
 
-        /*START UPLOAD FILE*/
-        if(isset($_FILES['image']) && isset($_FILES['dokumentasi'])){
-
-            //getLastAutoIncremet
-            $sql_id = "SELECT `AUTO_INCREMENT`
-                        FROM  INFORMATION_SCHEMA.TABLES
-                        WHERE TABLE_SCHEMA = 'u5200991_garuda'
-                        AND   TABLE_NAME   = 'absensi'";
-            $query = mysqli_query($connect,$sql_id);
-            
-            $id = mysqli_fetch_array($query);
-
-            $errors= array();
-            $file_ext=strtolower(end(explode('.',$_FILES['image']['name'])));
-            $file_name = $id[0]."_".$kode_kelas."_".$kode_tutor.".".$file_ext;
-            $file_size = $_FILES['image']['size'];
-            $file_tmp = $_FILES['image']['tmp_name'];
-            $file_type = $_FILES['image']['type'];
-
-            $dok_ext=strtolower(end(explode('.',$_FILES['dokumentasi']['name'])));
-            $dok_name = $id[0]."_DOK_".$kode_kelas."_".$kode_tutor.".".$file_ext;
-            $dok_size = $_FILES['dokumentasi']['size'];
-            $dok_tmp = $_FILES['dokumentasi']['tmp_name'];
-            $dok_type = $_FILES['dokumentasi']['type'];
-
-            $expensions= array("jpeg","jpg","png");
-
-            if(in_array($file_ext,$expensions)=== false || in_array($dok_ext,$expensions)=== false){
-                $errors[]="extension not allowed, please choose a JPEG or PNG file.";
-            }
-
-            if($file_size > 2097152 || $dok_size > 2097152){
-                $errors[]='File size must be excately 2 MB';
-            }
-
-            if(empty($errors)==true){
-                move_uploaded_file($file_tmp,"../../images/presensi/".$file_name);
-                move_uploaded_file($dok_tmp,"../../images/dokumentasi/".$dok_name);
-                $sql = "INSERT INTO absensi (kode_kelas, kode_matkul, kode_tutor, img_absen, dokumentasi, status_pertemuan, tanggal, tempat, waktu_mulai, waktu_selesai, catatan, time_submit) VALUES ('$kode_kelas', '$kode_matkul', '$kode_tutor', '$file_name' , '$dok_name', '$status_pertemuan', '$tanggal', '$tempat', '$waktu_mulai', '$waktu_selesai', '$catatan', '$timesubmit')";
-
-                $query = mysqli_query($connect,$sql);
-
-                if ($query) {
-                    echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../presensi\';</script>';
-                } else {
-                    echo '<script>alert("Data Gagal disimpan");window.location.href=\'../presensi\';</script>';
-                }
-            }else{
-                print_r($errors);
-                echo '<script>alert("Data Gagal disimpan");window.location.href=\'../presensi\';</script>';
-            }
-        }
-        mysqli_close($connect);
     }
 ?>

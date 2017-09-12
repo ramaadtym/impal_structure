@@ -226,7 +226,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Input -->
-            <form id="form_advanced_validation" method="POST">
+            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?addUser=tambahuser" method="POST">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -427,55 +427,3 @@
     <script src="../../js/demo.js"></script>
 </body>
 </html>
-
-<?php
-    require '../../koneksi.php';
-    if (isset($_POST['submit'])) {
-        $nim = $_POST['nim'];
-        $username = $_POST['username'];
-        $password = sha1($_POST['password']);
-        $email = $_POST['email'];
-        $user_level = $_POST['user_level'];
-        $nama = strtoupper($_POST['nama']);
-        $jeniskelamin = $_POST['jeniskelamin'];
-        $tgl_lahir = $_POST['tgl_lahir'];
-        $fakultas = $_POST['fakultas'];
-        $jurusan = strtoupper($_POST['jurusan']);
-        $kelas = strtoupper($_POST['kelas']);
-        $id_line = $_POST['id_line'];
-        $telepon = $_POST['telepon'];
-
-        //print_r($_POST);
-
-        //cek username
-        $sql_search = "SELECT username
-                    FROM user
-                    WHERE username='$username'";
-        $query = mysqli_query($connect, $sql_search);
-        if (mysqli_num_rows($query) == 1) {
-            echo '<script>alert("Username Telah Digunakan");window.location.href=\'../user\';</script>';
-        } else {
-            $sql = "INSERT INTO user (nim, username, password, email, user_level) VALUES('$nim', '$username', '$password', '$email', '$user_level');";
-            $sql .= "INSERT INTO detil_user (nim, nama, jeniskelamin, tgl_lahir, fakultas, jurusan, kelas, id_line, telepon) VALUES('$nim', '$nama', '$jeniskelamin', '$tgl_lahir', '$fakultas', '$jurusan', '$kelas', '$id_line', '$telepon');";
-
-            if ($user_level == "Tutor") {
-                $temp = str_replace(" ","",$nama);
-                $kode_tutor = strtoupper(substr($temp,(strlen($temp)/2),3));
-
-                $sql .= "INSERT INTO tutor (kode_tutor, nim) VALUES ('$kode_tutor','$nim')";
-                $query = mysqli_multi_query($connect,$sql);
-            } else {
-                $query = mysqli_multi_query($connect,$sql);
-            }
-
-            if (($query) && ($user_level == "Tutor")) {
-                echo '<script>alert("Data Tutor $nama($kode_tutor) Berhasil disimpan");window.location.href=\'../user\';</script>';
-            } else if ($query) {
-                echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../user\';</script>';
-            } else {
-                echo '<script>alert("Data Gagal disimpan");window.location.href=\'../user\';</script>';
-            }
-            mysqli_close($connect);
-        }
-    }
-?>

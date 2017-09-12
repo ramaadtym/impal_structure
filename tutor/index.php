@@ -76,7 +76,7 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="../logout.php"><i class="material-icons">power_settings_new</i></a></li>
+                <li><a href="../fungsi/pendaftaran.php?logout=keluar"><i class="material-icons">power_settings_new</i></a></li>
             </ul>
         </div>
     </div>

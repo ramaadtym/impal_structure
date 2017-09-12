@@ -229,7 +229,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Input -->
-            <form id="form_advanced_validation" method="POST">
+            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?addKelas=tambah" method="POST">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -409,34 +409,3 @@
 </body>
 </html>
 
-<?php
-    require '../../koneksi.php';
-    if (isset($_POST['submit'])) {
-        $kode_kelas = strtoupper($_POST['kode_kelas']);
-        $kode_matkul = strtoupper($_POST['kode_matkul']);
-        $kode_tutor = strtoupper($_POST['kode_tutor']);
-        $hari = strtoupper($_POST['hari']);
-        $jam = $_POST['jam'];
-        $group_line = $_POST['group_line'];
-        $tahun = $_POST['tahun'];
-        $data = $_POST['data'];
-
-        //print_r($_POST);
-
-        $sql = "INSERT INTO kelas (kode_kelas, kode_matkul, kode_tutor, hari, jam, group_line, tahun) VALUES('$kode_kelas', '$kode_matkul', '$kode_tutor', '$hari', '$jam', '$group_line', '$tahun');";
-        $query = mysqli_query($connect,$sql);
-
-        //insertMahasiswaKeTabel
-        foreach ($data as $nim) {
-            $sql_data = "INSERT INTO detail_kelas(kode_kelas, nim) VALUES ('$kode_kelas', '$nim')";
-            $query_data = mysqli_query($connect,$sql_data);
-        }
-
-        if ($query) {
-            echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../kelas\';</script>';
-        } else {
-            echo '<script>alert("Data Gagal disimpan");window.location.href=\'../kelas\';</script>';
-        }
-        mysqli_close($connect);
-    }
-?>
