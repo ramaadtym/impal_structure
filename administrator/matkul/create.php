@@ -226,7 +226,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Input -->
-            <form id="form_advanced_validation" method="POST">
+            <form id="form_advanced_validation" action="../../fungsi/kurikulum.php?tambahmatkul=tambah" method="POST">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -308,23 +308,3 @@
 </body>
 </html>
 
-<?php
-    require '../../koneksi.php';
-    if (isset($_POST['submit'])) {
-        $kode_matkul = strtoupper($_POST['kode_matkul']);
-        $nama_matkul = strtoupper($_POST['nama_matkul']);
-
-        //print_r($_POST);
-
-        $sql = "INSERT INTO matkul(kode_matkul, nama_matkul) VALUES('$kode_matkul', '$nama_matkul')";
-
-        $query = mysqli_query($connect,$sql);
-
-        if ($query) {
-            echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../matkul\';</script>';
-        } else {
-            echo '<script>alert("Data Gagal disimpan");window.location.href=\'../matkul\';</script>';
-        }
-        mysqli_close($connect);
-    }
-?>
