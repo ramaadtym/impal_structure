@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3e668bda-60d7-4b53-b840-028ee52c5f36" name="Default" comment="update add matkul">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/presensi/detail.php" afterPath="$PROJECT_DIR$/administrator/presensi/detail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/presensi/delete.php" afterPath="$PROJECT_DIR$/administrator/presensi/delete.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/presensi/edit.php" afterPath="$PROJECT_DIR$/administrator/presensi/edit.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/administrator/presensi/index.php" afterPath="$PROJECT_DIR$/administrator/presensi/index.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/fungsi/pendaftaran.php" afterPath="$PROJECT_DIR$/fungsi/pendaftaran.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,11 +41,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="pendaftaran.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="393">
-              <caret line="267" column="44" lean-forward="true" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
+            <state relative-caret-position="248">
+              <caret line="281" column="34" lean-forward="false" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="34" />
               <folding>
                 <element signature="e#56#135#0#PHP" expanded="false" />
                 <element signature="e#140#223#0#PHP" expanded="false" />
@@ -60,59 +59,87 @@
                 <element signature="n#add_presensi#0;n#!!top" expanded="false" />
                 <element signature="n#view_presensi#0;n#!!top" expanded="false" />
                 <element signature="n#verifikasi_presensi#0;n#!!top" expanded="false" />
+                <element signature="n#edit_presensi#0;n#!!top" expanded="false" />
+                <element signature="n#delete_presensi#0;n#!!top" expanded="false" />
                 <element signature="n#add_user#0;n#!!top" expanded="false" />
                 <element signature="n#viewUser#0;n#!!top" expanded="false" />
                 <element signature="n#view_data_tutor#0;n#!!top" expanded="false" />
-                <marker date="1505390895334" expanded="true" signature="1154:1424" ph="SELECT u.use... user" />
-                <marker date="1505390895334" expanded="true" signature="1592:1631" ph="/*...*/" />
-                <marker date="1505390895334" expanded="true" signature="2049:2130" ph="UPDATE user " />
-                <marker date="1505390895334" expanded="true" signature="2419:2514" ph="SELECT kode_... tutor" />
-                <marker date="1505390895334" expanded="true" signature="3643:3823" ph="INSERT INTO kelas... " />
-                <marker date="1505390895334" expanded="true" signature="3982:4054" ph="INSERT INTO detail_kelas... " />
-                <marker date="1505390895334" expanded="true" signature="5213:5410" ph="SELECT `AUTO... TABLES" />
-                <marker date="1505390895334" expanded="true" signature="6810:7163" ph="INSERT INTO absensi... " />
-                <marker date="1505390895334" expanded="true" signature="7813:7834" ph="SELECT * FRO... absensi" />
-                <marker date="1505390895334" expanded="true" signature="8172:10180" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="8798:10131" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="8890:9218" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="9006:9165" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="9332:9656" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="9448:9603" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="9748:10081" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="9863:10028" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="10522:10641" ph="UPDATE absen... " />
-                <marker date="1505390895334" expanded="true" signature="11624:12069" ph="UPDATE absen... " />
-                <marker date="1505390895334" expanded="true" signature="13137:13229" ph="SELECT usern... user" />
-                <marker date="1505390895334" expanded="true" signature="13472:13599" ph="INSERT INTO user... " />
-                <marker date="1505390895334" expanded="true" signature="13624:13841" ph="INSERT INTO detil_user... " />
-                <marker date="1505390895334" expanded="true" signature="14042:14107" ph="INSERT INTO tutor... " />
-                <marker date="1505390895334" expanded="true" signature="14939:14957" ph="SELECT * FRO... user" />
-                <marker date="1505390895334" expanded="true" signature="15000:15018" ph="SELECT * FRO... user" />
-                <marker date="1505390895334" expanded="true" signature="15160:16364" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="15537:16326" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="15613:15905" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="15721:15860" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="15983:16284" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="16090:16239" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="16483:16602" ph="SELECT * FRO... user" />
-                <marker date="1505390895334" expanded="true" signature="16796:17711" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="17232:17666" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="17312:17620" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="17424:17571" ph="..." />
-                <marker date="1505390895334" expanded="true" signature="18115:18213" ph="UPDATE tutor... " />
+                <marker date="1505391756099" expanded="true" signature="1286:1556" ph="SELECT u.use... user" />
+                <marker date="1505391756099" expanded="true" signature="1724:1763" ph="/*...*/" />
+                <marker date="1505391756099" expanded="true" signature="2181:2262" ph="UPDATE user " />
+                <marker date="1505391756099" expanded="true" signature="2551:2646" ph="SELECT kode_... tutor" />
+                <marker date="1505391756099" expanded="true" signature="3775:3955" ph="INSERT INTO kelas... " />
+                <marker date="1505391756099" expanded="true" signature="4114:4186" ph="INSERT INTO detail_kelas... " />
+                <marker date="1505391756099" expanded="true" signature="5345:5542" ph="SELECT `AUTO... TABLES" />
+                <marker date="1505391756099" expanded="true" signature="6942:7295" ph="INSERT INTO absensi... " />
+                <marker date="1505391756099" expanded="true" signature="7945:7966" ph="SELECT * FRO... absensi" />
+                <marker date="1505391756099" expanded="true" signature="8304:10348" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="8930:10299" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="9022:9350" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="9138:9297" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="9464:9788" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="9580:9735" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="9916:10249" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="10031:10196" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="10690:10809" ph="UPDATE absen... " />
+                <marker date="1505391756099" expanded="true" signature="11791:12236" ph="UPDATE absen... " />
+                <marker date="1505391756099" expanded="true" signature="12869:12979" ph="SELECT id_ab... absensi" />
+                <marker date="1505391756099" expanded="true" signature="13135:13217" ph="DELETE FROM " />
+                <marker date="1505391756099" expanded="true" signature="14499:14591" ph="SELECT usern... user" />
+                <marker date="1505391756099" expanded="true" signature="14834:14961" ph="INSERT INTO user... " />
+                <marker date="1505391756099" expanded="true" signature="14986:15203" ph="INSERT INTO detil_user... " />
+                <marker date="1505391756099" expanded="true" signature="15404:15469" ph="INSERT INTO tutor... " />
+                <marker date="1505391756099" expanded="true" signature="16301:16319" ph="SELECT * FRO... user" />
+                <marker date="1505391756099" expanded="true" signature="16362:16380" ph="SELECT * FRO... user" />
+                <marker date="1505391756099" expanded="true" signature="16522:17726" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="16899:17688" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="16975:17267" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="17083:17222" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="17345:17646" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="17452:17601" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="17845:17964" ph="SELECT * FRO... user" />
+                <marker date="1505391756099" expanded="true" signature="18158:19073" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="18594:19028" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="18674:18982" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="18786:18933" ph="..." />
+                <marker date="1505391756099" expanded="true" signature="19477:19575" ph="UPDATE tutor... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="delete.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/presensi/delete.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
+              <folding>
+                <marker date="1505391909205" expanded="true" signature="624:734" ph="SELECT id_ab... absensi" />
+                <marker date="1505391909205" expanded="true" signature="875:957" ph="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/administrator/presensi/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="562">
+              <caret line="251" column="32" lean-forward="true" selection-start-line="251" selection-start-column="32" selection-end-line="251" selection-end-column="32" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="edit.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/administrator/presensi/edit.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="252" column="63" lean-forward="false" selection-start-line="252" selection-start-column="63" selection-end-line="252" selection-end-column="63" />
+            <state relative-caret-position="408">
+              <caret line="249" column="140" lean-forward="false" selection-start-line="249" selection-start-column="140" selection-end-line="249" selection-end-column="140" />
               <folding>
-                <marker date="1505390981265" expanded="true" signature="9790:10036" ph="SELECT * fro... kelas" />
-                <marker date="1505390981265" expanded="true" signature="10423:10573" ph="SELECT * FRO... absensi" />
+                <marker date="1505391851703" expanded="true" signature="9790:10036" ph="SELECT * fro... kelas" />
+                <marker date="1505391851703" expanded="true" signature="10423:10573" ph="SELECT * FRO... absensi" />
+                <marker date="1505391851703" expanded="true" signature="10423:10610" ph="SELECT * FRO... absensi" />
               </folding>
             </state>
           </provider>
@@ -122,7 +149,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_</find>
       <find>kode_kelas</find>
       <find>block</find>
       <find>With Material Design Colors - With Gap</find>
@@ -152,6 +178,7 @@
       <find>search</find>
       <find>presensi</find>
       <find>catatan</find>
+      <find>$search</find>
     </findStrings>
     <replaceStrings>
       <replace>$presensi</replace>
@@ -163,7 +190,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/administrator/user/delete.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/administrator/kelas/addMhsKls.php" />
         <option value="$PROJECT_DIR$/administrator/kelas/detail.php" />
@@ -214,6 +240,7 @@
         <option value="$PROJECT_DIR$/administrator/presensi/detail.php" />
         <option value="$PROJECT_DIR$/fungsi/pendaftaran.php" />
         <option value="$PROJECT_DIR$/administrator/presensi/edit.php" />
+        <option value="$PROJECT_DIR$/administrator/presensi/delete.php" />
       </list>
     </option>
   </component>
@@ -429,7 +456,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200259000" />
+    <option name="totallyTimeSpent" value="201123000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1380" height="754" extended-state="0" />
@@ -493,13 +520,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/administrator/user/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="216" column="24" lean-forward="true" selection-start-line="216" selection-start-column="24" selection-end-line="216" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/user/pass.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -822,14 +842,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/presensi/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="252" column="26" lean-forward="true" selection-start-line="252" selection-start-column="26" selection-end-line="252" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/administrator/tutor/edit.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -865,10 +877,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/presensi/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="562">
+          <caret line="251" column="32" lean-forward="true" selection-start-line="251" selection-start-column="32" selection-end-line="251" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/presensi/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="249" column="140" lean-forward="false" selection-start-line="249" selection-start-column="140" selection-end-line="249" selection-end-column="140" />
+          <folding>
+            <marker date="1505391851703" expanded="true" signature="9790:10036" ph="SELECT * fro... kelas" />
+            <marker date="1505391851703" expanded="true" signature="10423:10573" ph="SELECT * FRO... absensi" />
+            <marker date="1505391851703" expanded="true" signature="10423:10610" ph="SELECT * FRO... absensi" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/presensi/delete.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="75" lean-forward="false" selection-start-line="39" selection-start-column="75" selection-end-line="39" selection-end-column="75" />
+          <folding>
+            <marker date="1505391909205" expanded="true" signature="624:734" ph="SELECT id_ab... absensi" />
+            <marker date="1505391909205" expanded="true" signature="875:957" ph="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/fungsi/pendaftaran.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="393">
-          <caret line="267" column="44" lean-forward="true" selection-start-line="267" selection-start-column="44" selection-end-line="267" selection-end-column="44" />
+        <state relative-caret-position="248">
+          <caret line="281" column="34" lean-forward="false" selection-start-line="281" selection-start-column="34" selection-end-line="281" selection-end-column="34" />
           <folding>
             <element signature="e#56#135#0#PHP" expanded="false" />
             <element signature="e#140#223#0#PHP" expanded="false" />
@@ -882,57 +925,50 @@
             <element signature="n#add_presensi#0;n#!!top" expanded="false" />
             <element signature="n#view_presensi#0;n#!!top" expanded="false" />
             <element signature="n#verifikasi_presensi#0;n#!!top" expanded="false" />
+            <element signature="n#edit_presensi#0;n#!!top" expanded="false" />
+            <element signature="n#delete_presensi#0;n#!!top" expanded="false" />
             <element signature="n#add_user#0;n#!!top" expanded="false" />
             <element signature="n#viewUser#0;n#!!top" expanded="false" />
             <element signature="n#view_data_tutor#0;n#!!top" expanded="false" />
-            <marker date="1505390895334" expanded="true" signature="1154:1424" ph="SELECT u.use... user" />
-            <marker date="1505390895334" expanded="true" signature="1592:1631" ph="/*...*/" />
-            <marker date="1505390895334" expanded="true" signature="2049:2130" ph="UPDATE user " />
-            <marker date="1505390895334" expanded="true" signature="2419:2514" ph="SELECT kode_... tutor" />
-            <marker date="1505390895334" expanded="true" signature="3643:3823" ph="INSERT INTO kelas... " />
-            <marker date="1505390895334" expanded="true" signature="3982:4054" ph="INSERT INTO detail_kelas... " />
-            <marker date="1505390895334" expanded="true" signature="5213:5410" ph="SELECT `AUTO... TABLES" />
-            <marker date="1505390895334" expanded="true" signature="6810:7163" ph="INSERT INTO absensi... " />
-            <marker date="1505390895334" expanded="true" signature="7813:7834" ph="SELECT * FRO... absensi" />
-            <marker date="1505390895334" expanded="true" signature="8172:10180" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="8798:10131" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="8890:9218" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="9006:9165" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="9332:9656" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="9448:9603" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="9748:10081" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="9863:10028" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="10522:10641" ph="UPDATE absen... " />
-            <marker date="1505390895334" expanded="true" signature="11624:12069" ph="UPDATE absen... " />
-            <marker date="1505390895334" expanded="true" signature="13137:13229" ph="SELECT usern... user" />
-            <marker date="1505390895334" expanded="true" signature="13472:13599" ph="INSERT INTO user... " />
-            <marker date="1505390895334" expanded="true" signature="13624:13841" ph="INSERT INTO detil_user... " />
-            <marker date="1505390895334" expanded="true" signature="14042:14107" ph="INSERT INTO tutor... " />
-            <marker date="1505390895334" expanded="true" signature="14939:14957" ph="SELECT * FRO... user" />
-            <marker date="1505390895334" expanded="true" signature="15000:15018" ph="SELECT * FRO... user" />
-            <marker date="1505390895334" expanded="true" signature="15160:16364" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="15537:16326" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="15613:15905" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="15721:15860" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="15983:16284" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="16090:16239" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="16483:16602" ph="SELECT * FRO... user" />
-            <marker date="1505390895334" expanded="true" signature="16796:17711" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="17232:17666" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="17312:17620" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="17424:17571" ph="..." />
-            <marker date="1505390895334" expanded="true" signature="18115:18213" ph="UPDATE tutor... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/presensi/edit.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="252" column="63" lean-forward="false" selection-start-line="252" selection-start-column="63" selection-end-line="252" selection-end-column="63" />
-          <folding>
-            <marker date="1505390981265" expanded="true" signature="9790:10036" ph="SELECT * fro... kelas" />
-            <marker date="1505390981265" expanded="true" signature="10423:10573" ph="SELECT * FRO... absensi" />
+            <marker date="1505391756099" expanded="true" signature="1286:1556" ph="SELECT u.use... user" />
+            <marker date="1505391756099" expanded="true" signature="1724:1763" ph="/*...*/" />
+            <marker date="1505391756099" expanded="true" signature="2181:2262" ph="UPDATE user " />
+            <marker date="1505391756099" expanded="true" signature="2551:2646" ph="SELECT kode_... tutor" />
+            <marker date="1505391756099" expanded="true" signature="3775:3955" ph="INSERT INTO kelas... " />
+            <marker date="1505391756099" expanded="true" signature="4114:4186" ph="INSERT INTO detail_kelas... " />
+            <marker date="1505391756099" expanded="true" signature="5345:5542" ph="SELECT `AUTO... TABLES" />
+            <marker date="1505391756099" expanded="true" signature="6942:7295" ph="INSERT INTO absensi... " />
+            <marker date="1505391756099" expanded="true" signature="7945:7966" ph="SELECT * FRO... absensi" />
+            <marker date="1505391756099" expanded="true" signature="8304:10348" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="8930:10299" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="9022:9350" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="9138:9297" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="9464:9788" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="9580:9735" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="9916:10249" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="10031:10196" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="10690:10809" ph="UPDATE absen... " />
+            <marker date="1505391756099" expanded="true" signature="11791:12236" ph="UPDATE absen... " />
+            <marker date="1505391756099" expanded="true" signature="12869:12979" ph="SELECT id_ab... absensi" />
+            <marker date="1505391756099" expanded="true" signature="13135:13217" ph="DELETE FROM " />
+            <marker date="1505391756099" expanded="true" signature="14499:14591" ph="SELECT usern... user" />
+            <marker date="1505391756099" expanded="true" signature="14834:14961" ph="INSERT INTO user... " />
+            <marker date="1505391756099" expanded="true" signature="14986:15203" ph="INSERT INTO detil_user... " />
+            <marker date="1505391756099" expanded="true" signature="15404:15469" ph="INSERT INTO tutor... " />
+            <marker date="1505391756099" expanded="true" signature="16301:16319" ph="SELECT * FRO... user" />
+            <marker date="1505391756099" expanded="true" signature="16362:16380" ph="SELECT * FRO... user" />
+            <marker date="1505391756099" expanded="true" signature="16522:17726" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="16899:17688" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="16975:17267" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="17083:17222" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="17345:17646" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="17452:17601" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="17845:17964" ph="SELECT * FRO... user" />
+            <marker date="1505391756099" expanded="true" signature="18158:19073" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="18594:19028" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="18674:18982" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="18786:18933" ph="..." />
+            <marker date="1505391756099" expanded="true" signature="19477:19575" ph="UPDATE tutor... " />
           </folding>
         </state>
       </provider>

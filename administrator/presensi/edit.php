@@ -247,7 +247,7 @@
                 $search = $_GET['id'];
                 $sql = "SELECT *
                         FROM absensi
-                        WHERE id_absensi='$search' AND kode_kelas='$kode_kelas' AND status_acc='Pending'";
+                        WHERE id_absensi='$search' AND kode_kelas='$kode_kelas' AND status_acc='Pending' OR status_acc = 'Sudah Diverifikasi'";
                 $query = mysqli_query($connect, $sql);
                 if (mysqli_num_rows($query) == 0) {
                     echo '<script>alert("ID Absensi / Kode Kelas / Status ACC Tidak Sesuai");window.location.href=\'../presensi\';</script>';

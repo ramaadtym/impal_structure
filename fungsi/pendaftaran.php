@@ -27,6 +27,10 @@ if(!isset($_SESSION)){
        $a = $_GET["cari"];
         edit_presensi($a);
     }
+    if (isset($_GET["delPresensi"]) && $_GET["delPresensi"] == "hapus"){
+       $a = $_GET["id"];
+       delete_presensi($a);
+    }
 
     function login(){
             include("../koneksi.php");
@@ -212,7 +216,7 @@ if(!isset($_SESSION)){
                                                         <i class=\"material-icons\">edit</i>
                                                     </button>
                                                 </a>
-                                                <a href='delete.php?id=$value[id_absensi]'>
+                                                <a href='../../fungsi/pendaftaran.php?delPresensi=hapus&id=$value[id_absensi]'>
                                                     <button type=\"button\" class=\"btn btn-danger waves-effect\">
                                                         <i class=\"material-icons\">delete_forever</i>
                                                     </button>
@@ -241,7 +245,6 @@ if(!isset($_SESSION)){
             mysqli_close($connect);
         }
     }
-
     function edit_presensi($search){
         require '../koneksi.php';
         if (isset($_POST['submit']) && isset($_POST['pernyataan'])) {
@@ -273,6 +276,34 @@ if(!isset($_SESSION)){
                 echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../administrator/presensi\';</script>';
             } else {
                 echo '<script>alert("Data Gagal disimpan");window.location.href=\'../administrator/presensi\';</script>';
+            }
+        }
+    }
+    function delete_presensi($id){
+        require '../koneksi.php';
+        if (!isset($id)) {
+            echo '<script>alert("Presensi Tidak Sesuai!");window.location.href=\'../administrator/presensi\';</script>';
+        } else {
+            $sql = "SELECT id_absensi
+                FROM absensi
+                WHERE id_absensi='$id' AND status_acc='Pending'";
+            $query = mysqli_query($connect, $sql);
+
+            $hasil = mysqli_num_rows($query);
+
+            if ($hasil > 0) {
+                $sql = "DELETE
+                    FROM absensi
+                    WHERE id_absensi='$id'";
+                $query = mysqli_query($connect, $sql);
+                if ($query) {
+                    echo '<script>alert("Presensi Berhasil Dihapus!");window.location.href=\'../administrator/presensi\';</script>';
+                } else {
+                    echo '<script>alert("Presensi Gagal Dihapus!");window.location.href=\'../administrator/presensi\';</script>';
+                }
+
+            } else {
+                echo '<script>alert("Presensi Gagal Dihapus! Karena sudah di acc!");window.location.href=\'../administrator/presensi\';</script>';
             }
         }
     }

@@ -31,13 +31,13 @@
                     WHERE id_absensi='$id'";
             $query = mysqli_query($connect, $sql);
             if ($query) {
-                echo '<script>alert("Presensi Berhasil Dihapus!");window.location.href=\'../presensi\';</script>';
+                echo '<script>alert("Presensi Berhasil Dihapus!");window.location.href=\'../administrasi/presensi\';</script>';
             } else {
-                echo '<script>alert("Presensi Gagal Dihapus!");window.location.href=\'../presensi\';</script>';
+                echo '<script>alert("Presensi Gagal Dihapus!");window.location.href=\'../administrasi/presensi\';</script>';
             }
 
         } else {
-            echo '<script>alert("Presensi Gagal Dihapus!");window.location.href=\'../presensi\';</script>';
+            echo '<script>alert("Presensi Gagal Dihapus karena telah di ACC!");window.location.href=\'../administrasi/presensi\';</script>';
         }
     }
 ?>
