@@ -1,6 +1,7 @@
 <?php
+if(!isset($_SESSION)){
     session_start();
-
+}
     if (isset($_GET["login"]) && $_GET["login"] == "masuk"){
         login();
     }
@@ -15,6 +16,9 @@
     }
     if (isset($_GET["addUser"]) && $_GET["addUser"] == "tambahuser"){
         add_user();
+    }
+    if (isset($_GET["editTutor"]) && $_GET["editTutor"] == "mauedit"){
+        editTutor();
     }
     function login(){
             include("../koneksi.php");
@@ -245,6 +249,52 @@
                                 </tr>
                             ";
             }
+        }
+    }
+    function view_data_tutor($connect){
+        $sql = "SELECT * FROM user u JOIN detil_user d ON (u.nim = d.nim)  JOIN tutor t ON (u.nim = t.nim) WHERE (u.user_level='Tutor')";
+        $tutor = mysqli_query($connect, $sql);
+        if(mysqli_num_rows($tutor) > 0){
+            foreach ($tutor as $value) {
+                echo "
+                                    <tr>
+                                        <td>".$value['kode_tutor']."</td>                                        
+                                        <td>".$value['nim']."</td>
+                                        <td>".$value['nama']."</td>
+                                        <td>".$value['matkul1']."</td>
+                                        <td>".$value['matkul2']."</td>
+                                        <td>
+                                            <a href='edit.php?nim=$value[nim]'>
+                                                <button type=\"button\" class=\"btn btn-primary waves-effect\">
+                                                    <i class=\"material-icons\">edit</i>
+                                                </button>
+                                            </a>
+                                        </td>   
+                                    </tr>
+                                    ";
+            }
+        }
+    }
+    function editTutor(){
+        include "../koneksi.php";
+        if (isset($_POST['submit'])) {
+            $nim = $_POST['nim'];
+            $kode_tutor = $_POST['kode_tutor'];
+            $matkul1 = $_POST['matkul1'];
+            $matkul2 = $_POST['matkul2'];
+
+            //print_r($_POST);
+
+            $sql = "UPDATE tutor SET kode_tutor='$kode_tutor', matkul1='$matkul1', matkul2='$matkul2' WHERE nim='$nim'";
+
+            $query = mysqli_query($connect,$sql);
+
+            if ($query) {
+                echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../tutor\';</script>';
+            } else {
+                echo '<script>alert("Data Gagal disimpan");window.location.href=\'../tutor\';</script>';
+            }
+            mysqli_close($connect);
         }
     }
 ?>

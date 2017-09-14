@@ -247,7 +247,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Input -->
-            <form id="form_advanced_validation" method="POST">
+            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?editTutor=mauedit"method="POST">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -381,7 +381,7 @@
 </html>
 
 <?php
-    require '../../koneksi.php';
+/*    require '../../koneksi.php';
     if (isset($_POST['submit'])) {
         $nim = $_POST['nim'];
         $kode_tutor = $_POST['kode_tutor'];
@@ -400,5 +400,5 @@
             echo '<script>alert("Data Gagal disimpan");window.location.href=\'../tutor\';</script>';
         }
         mysqli_close($connect);
-    }
+    }*/
 ?>

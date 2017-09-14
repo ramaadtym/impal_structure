@@ -1,5 +1,6 @@
 <?php
     session_start();
+include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -243,39 +244,9 @@
                             <tbody>
                             <?php
                             // put your code here
-                            require '../../koneksi.php';
+                            require ("../../fungsi/pendaftaran.php");
 
-                            $sql = "
-                            SELECT *
-                            FROM user u
-                            JOIN detil_user d ON (u.nim = d.nim)
-                            JOIN tutor t ON (u.nim = t.nim)
-                            WHERE (u.user_level='Tutor')";
-
-
-                            $tutor = mysqli_query($connect, $sql);
-                            if(mysqli_num_rows($tutor) == 0){
-                                //echo '<tr><td colspan="6"><center>Data Tidak Tersedia.</center></td></tr>';
-                            } else {
-                                foreach ($tutor as $value) {
-                                    echo "
-                                    <tr>
-                                        <td>".$value['kode_tutor']."</td>                                        
-                                        <td>".$value['nim']."</td>
-                                        <td>".$value['nama']."</td>
-                                        <td>".$value['matkul1']."</td>
-                                        <td>".$value['matkul2']."</td>
-                                        <td>
-                                            <a href='edit.php?nim=$value[nim]'>
-                                                <button type=\"button\" class=\"btn btn-primary waves-effect\">
-                                                    <i class=\"material-icons\">edit</i>
-                                                </button>
-                                            </a>
-                                        </td>   
-                                    </tr>
-                                    ";
-                                }
-                            }
+                            view_data_tutor($connect);
                             ?>
                             </tbody>
                         </table>
