@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -242,7 +243,7 @@
                             </thead>
                             <tbody>
                             <?php
-                            // put your code here
+                            /*// put your code here
                             require '../../koneksi.php';
 
                             $sql = "SELECT * FROM user";
@@ -270,11 +271,16 @@
                                                 <i class=\"material-icons\">delete_forever</i>
                                             </button>
                                         </a>
-                                    </td>   
+                                    </td>
                                 </tr>
                             ";
                                 }
-                            }
+                            }*/
+                            require ("../../fungsi/pendaftaran.php");
+
+                            viewUser($connect);
+
+
                             ?>
                             </tbody>
                         </table>

@@ -168,7 +168,6 @@
         mysqli_close($connect);
     }
     function add_user(){
-        //add tentor doang ternyata
         include("../koneksi.php");
         $nim = $_POST['nim'];
         $username = $_POST['username'];
@@ -206,15 +205,46 @@
             } else {
                 $query = mysqli_multi_query($connect,$sql);
             }
-
+            // Masukin Tutor
             if (($query) && ($user_level == "Tutor")) {
-                echo '<script>alert("Data Tutor $nama($kode_tutor) Berhasil disimpan");window.location.href=\'../administrator/user\';</script>';
+                echo '<script>alert("Data Tutor'.$nama($kode_tutor).'Berhasil disimpan");window.location.href=\'../administrator/user\';</script>';
             } else if ($query) {
                 echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../administrator/user\';</script>';
             } else {
                 echo '<script>alert("Data Gagal disimpan");window.location.href=\'../administrator/user\';</script>';
             }
             mysqli_close($connect);
+        }
+    }
+    function viewUser($connect){
+        // put your code here
+
+        //$sql = "SELECT * FROM user";
+        $user = mysqli_query($connect, "SELECT * FROM user");
+        if(mysqli_num_rows($user) > 0){
+            foreach ($user as $value) {
+                echo "
+                                <tr>
+                                    <td>".$value['nim']."</td>
+                                    <td>".$value['username']."</td>
+                                    <td>".$value['email']."</td>
+                                    <td>".$value['user_level']."</td>
+                                    <td>".$value['last_login']."</td>
+                                    <td>
+                                        <a href='edit.php?nim=$value[nim]'>
+                                            <button type=\"button\" class=\"btn btn-primary waves-effect\">
+                                                <i class=\"material-icons\">edit</i>
+                                            </button>
+                                        </a>
+                                        <a href='delete.php?nim=$value[nim]'>
+                                            <button type=\"button\" class=\"btn btn-danger waves-effect\">
+                                                <i class=\"material-icons\">delete_forever</i>
+                                            </button>
+                                        </a>
+                                    </td>
+                                </tr>
+                            ";
+            }
         }
     }
 ?>
