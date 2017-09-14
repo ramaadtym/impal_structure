@@ -255,7 +255,7 @@
                 }
                 $presensi = mysqli_fetch_array($query);
             ?>
-            <form id="form_advanced_validation" method="POST" enctype="multipart/form-data">
+            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?editPresensi=edit&cari=<?php echo $search ; ?>." method="POST" enctype="multipart/form-data">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">
@@ -429,36 +429,5 @@
 </html>
 
 <?php
-    require '../../koneksi.php';
-    if (isset($_POST['submit']) && isset($_POST['pernyataan'])) {
-        $kode_kelas = $_POST['kode_kelas'];
-        $kode_matkul = $_POST['kode_matkul'];
-        $kode_tutor = $_POST['kode_tutor'];
-        $status_pertemuan = $_POST['status_pertemuan'];
-        $tanggal = $_POST['tanggal'];
-        $tempat = $_POST['tempat'];
-        $waktu_mulai = $_POST['waktu_mulai'];
-        $waktu_selesai = $_POST['waktu_selesai'];
-        $catatan = $_POST['catatan'];
 
-        $sql = "UPDATE absensi SET
-                kode_kelas='$kode_kelas',
-                kode_matkul='$kode_matkul', 
-                kode_tutor='$kode_tutor', 
-                status_pertemuan='$status_pertemuan', 
-                tanggal='$tanggal', 
-                tempat='$tempat',
-                waktu_mulai='$waktu_mulai', 
-                waktu_selesai='$waktu_selesai',
-                catatan='$catatan'
-                WHERE id_absensi='$search'";
-
-        $query = mysqli_query($connect,$sql);
-
-        if ($query) {
-            echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../presensi\';</script>';
-        } else {
-            echo '<script>alert("Data Gagal disimpan");window.location.href=\'../presensi\';</script>';
-        }
-    }
 ?>

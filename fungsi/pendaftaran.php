@@ -20,6 +20,14 @@ if(!isset($_SESSION)){
     if (isset($_GET["editTutor"]) && $_GET["editTutor"] == "mauedit"){
         editTutor();
     }
+    if (isset($_GET["verif_presensi"]) && $_GET["verif_presensi"] == "verif"){
+        verifikasi_presensi();
+    }
+    if (isset($_GET["editPresensi"]) && $_GET["editPresensi"] == "edit"){
+       $a = $_GET["cari"];
+        edit_presensi($a);
+    }
+
     function login(){
             include("../koneksi.php");
             $username = $_POST['username'];
@@ -74,6 +82,7 @@ if(!isset($_SESSION)){
         session_destroy();
         header("Location: ../index.php");
     }
+
     function add_kelas(){
             include("../koneksi.php");
             $kode_kelas = strtoupper($_POST['kode_kelas']);
@@ -103,6 +112,8 @@ if(!isset($_SESSION)){
             }
             mysqli_close($connect);
     }
+
+    /*PRESENSI*/
     function add_presensi(){
         include("../koneksi.php");
         $kode_kelas = $_POST['kode_kelas'];
@@ -171,6 +182,102 @@ if(!isset($_SESSION)){
         }
         mysqli_close($connect);
     }
+    function view_presensi($connect){
+        $sql = "SELECT * FROM absensi";
+
+
+        $presensi = mysqli_query($connect, $sql);
+        if(mysqli_num_rows($presensi) == 0){
+            //echo '<tr><td colspan="15"><center>Data Tidak Tersedia.</center></td></tr>';
+        } else {
+            $i = 1;
+            foreach ($presensi as $value) {
+                echo "
+                                        <tr>
+                                            <td>".$value['kode_kelas']."</td>
+                                            <td>".$value['kode_tutor']."</td>
+                                            <td>".$value['status_pertemuan']."</td>
+                                            <td>".$value['tanggal']."</td>
+                                            <td>".$value['waktu_mulai'].'-'.$value['waktu_selesai']."</td>
+                                            <td>".$value['status_acc']."</td>
+                                            <td>".$value['admin_acc']."</td>
+                                            <td>
+                                                <a href='detail.php?id=$value[id_absensi]'>
+                                                    <button type=\"button\" class=\"btn btn-default waves-effect\">
+                                                        <i class=\"material-icons\">pageview</i>
+                                                    </button>
+                                                </a>
+                                                <a href='edit.php?kode=$value[kode_kelas]&id=$value[id_absensi]'>
+                                                    <button type=\"button\" class=\"btn btn-primary waves-effect\">
+                                                        <i class=\"material-icons\">edit</i>
+                                                    </button>
+                                                </a>
+                                                <a href='delete.php?id=$value[id_absensi]'>
+                                                    <button type=\"button\" class=\"btn btn-danger waves-effect\">
+                                                        <i class=\"material-icons\">delete_forever</i>
+                                                    </button>
+                                                </a>
+                                            </td>   
+                                        </tr>
+                                    ";
+            }
+        }
+    }
+    function verifikasi_presensi(){
+        if (isset($_POST['submit'])) {
+            $id = $_GET['id'];
+            $admin_acc = $_SESSION['nama'];
+            date_default_timezone_set('Asia/Jakarta');
+            $time_acc = date('Y-m-d H:i:s');
+
+            $sql = "UPDATE absensi SET admin_acc='$admin_acc', time_acc='$time_acc', status_acc='Sudah Diverifikasi' WHERE id_absensi='$id'";
+
+            $query = mysqli_query($connect,$sql);
+            if ($query) {
+                echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../presensi\';</script>';
+            } else {
+                echo '<script>alert("Data Gagal disimpan");window.location.href=\'../presensi\';</script>';
+            }
+            mysqli_close($connect);
+        }
+    }
+
+    function edit_presensi($search){
+        require '../koneksi.php';
+        if (isset($_POST['submit']) && isset($_POST['pernyataan'])) {
+            $kode_kelas = $_POST['kode_kelas'];
+            $kode_matkul = $_POST['kode_matkul'];
+            $kode_tutor = $_POST['kode_tutor'];
+            $status_pertemuan = $_POST['status_pertemuan'];
+            $tanggal = $_POST['tanggal'];
+            $tempat = $_POST['tempat'];
+            $waktu_mulai = $_POST['waktu_mulai'];
+            $waktu_selesai = $_POST['waktu_selesai'];
+            $catatan = $_POST['catatan'];
+
+            $sql = "UPDATE absensi SET
+                kode_kelas='$kode_kelas',
+                kode_matkul='$kode_matkul', 
+                kode_tutor='$kode_tutor', 
+                status_pertemuan='$status_pertemuan', 
+                tanggal='$tanggal', 
+                tempat='$tempat',
+                waktu_mulai='$waktu_mulai', 
+                waktu_selesai='$waktu_selesai',
+                catatan='$catatan'
+                WHERE id_absensi='$search'";
+
+            $query = mysqli_query($connect,$sql);
+
+            if ($query) {
+                echo '<script>alert("Data Berhasil disimpan");window.location.href=\'../administrator/presensi\';</script>';
+            } else {
+                echo '<script>alert("Data Gagal disimpan");window.location.href=\'../administrator/presensi\';</script>';
+            }
+        }
+    }
+
+    /*USER*/
     function add_user(){
         include("../koneksi.php");
         $nim = $_POST['nim'];
@@ -275,6 +382,8 @@ if(!isset($_SESSION)){
             }
         }
     }
+
+    /*TUTOR*/
     function editTutor(){
         include "../koneksi.php";
         if (isset($_POST['submit'])) {

@@ -1,5 +1,6 @@
 ﻿<?php
     session_start();
+    include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -391,7 +392,7 @@
             <?php
                 } else {
             ?>
-            <form id="form_advanced_validation" method="GET">
+            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?verif_presensi=verif" method="GET">
                 <div class="row clearfix">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">

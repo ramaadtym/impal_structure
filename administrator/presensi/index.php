@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -244,48 +245,8 @@
                             </thead>
                             <tbody>
                             <?php
-                            // put your code here
-                            require '../../koneksi.php';
-
-                            $sql = "SELECT * FROM absensi";
-
-
-                            $presensi = mysqli_query($connect, $sql);
-                            if(mysqli_num_rows($presensi) == 0){
-                                //echo '<tr><td colspan="15"><center>Data Tidak Tersedia.</center></td></tr>';
-                            } else {
-                                $i = 1;
-                                foreach ($presensi as $value) {
-                                    echo "
-                                        <tr>
-                                            <td>".$value['kode_kelas']."</td>
-                                            <td>".$value['kode_tutor']."</td>
-                                            <td>".$value['status_pertemuan']."</td>
-                                            <td>".$value['tanggal']."</td>
-                                            <td>".$value['waktu_mulai'].'-'.$value['waktu_selesai']."</td>
-                                            <td>".$value['status_acc']."</td>
-                                            <td>".$value['admin_acc']."</td>
-                                            <td>
-                                                <a href='detail.php?id=$value[id_absensi]'>
-                                                    <button type=\"button\" class=\"btn btn-default waves-effect\">
-                                                        <i class=\"material-icons\">pageview</i>
-                                                    </button>
-                                                </a>
-                                                <a href='edit.php?kode=$value[kode_kelas]&id=$value[id_absensi]'>
-                                                    <button type=\"button\" class=\"btn btn-primary waves-effect\">
-                                                        <i class=\"material-icons\">edit</i>
-                                                    </button>
-                                                </a>
-                                                <a href='delete.php?id=$value[id_absensi]'>
-                                                    <button type=\"button\" class=\"btn btn-danger waves-effect\">
-                                                        <i class=\"material-icons\">delete_forever</i>
-                                                    </button>
-                                                </a>
-                                            </td>   
-                                        </tr>
-                                    ";
-                                }
-                            }
+                                require ("../../fungsi/pendaftaran.php");
+                                view_presensi($connect);
                             ?>
                             </tbody>
                         </table>
