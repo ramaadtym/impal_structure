@@ -168,6 +168,7 @@
         mysqli_close($connect);
     }
     function add_user(){
+        //add tentor doang ternyata
         include("../koneksi.php");
         $nim = $_POST['nim'];
         $username = $_POST['username'];
