@@ -1,5 +1,6 @@
 <?php
     session_start();
+    include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -241,51 +242,8 @@
                             </thead>
                             <tbody>
                             <?php
-                            // put your code here
-                            require '../../koneksi.php';
-
-                            $sql = "
-                            SELECT k.kode_kelas kode_kelas, m.nama_matkul nama_matkul, k.kode_tutor kode_tutor, k.hari hari, k.jam jam, d.nama nama
-                            FROM kelas k
-                            JOIN tutor t ON (t.kode_tutor = k.kode_tutor)
-                            JOIN matkul m ON (m.kode_matkul = k.kode_matkul)
-                            JOIN user u ON (t.nim = u.nim)
-                            JOIN detil_user d ON (u.nim = d.nim)";
-
-
-                            $kelas = mysqli_query($connect, $sql);
-                            if(mysqli_num_rows($kelas) == 0){
-                                //echo '<tr><td colspan="8"><center>Data Tidak Tersedia.</center></td></tr>';
-                            } else {
-                                foreach ($kelas as $value) {
-                                    echo "
-                                    <tr>
-                                        <td>".$value['kode_kelas']."</td>
-                                        <td>".$value['hari']."</td>                                        
-                                        <td>".$value['jam']."</td>                                        
-                                        <td>".$value['kode_tutor']."</td>
-                                        <td>".$value['nama']."</td>
-                                        <td>
-                                            <a href='detail.php?kode=$value[kode_kelas]'>
-                                                <button type=\"button\" class=\"btn btn-default waves-effect\">
-                                                    <i class=\"material-icons\">pageview</i>
-                                                </button>
-                                            </a>
-                                            <a href='edit.php?kode=$value[kode_kelas]'>
-                                                <button type=\"button\" class=\"btn btn-primary waves-effect\">
-                                                    <i class=\"material-icons\">edit</i>
-                                                </button>
-                                            </a>
-                                            <a href='delete.php?kode=$value[kode_kelas]'>
-                                                <button type=\"button\" class=\"btn btn-danger waves-effect\">
-                                                    <i class=\"material-icons\">delete_forever</i>
-                                                </button>
-                                            </a>
-                                        </td>   
-                                    </tr>
-                                    ";
-                                }
-                            }
+                            require ("../../fungsi/pendaftaran.php");
+                            view_kelas($connect);
                             ?>
                             </tbody>
                         </table>

@@ -1,5 +1,6 @@
 <?php
     session_start();
+include "../../koneksi.php";
     if (empty($_SESSION)) {
         header("Location: ../../");
     } elseif ($_SESSION['user_level'] != "Administrator") {
@@ -243,38 +244,8 @@
                             <tbody>
                             <?php
                             // put your code here
-                            require '../../koneksi.php';
-
-                            $sql = "
-                            SELECT *
-                            FROM user u
-                            JOIN detil_user d ON (u.nim = d.nim)
-                            WHERE (u.user_level='Mahasiswa')";
-
-                            $mahasiswa = mysqli_query($connect, $sql);
-                            if(mysqli_num_rows($mahasiswa) == 0){
-                                //echo '<tr><td colspan="10"><center>Data Tidak Tersedia.</center></td></tr>';
-                            } else {
-                                foreach ($mahasiswa as $value) {
-                                    echo "
-                                    <tr>
-                                        <td>".$value['nim']."</td>
-                                        <td>".$value['nama']."</td>
-                                        <td>".$value['fakultas']."</td>
-                                        <td>".$value['jurusan']."</td>
-                                        <td>".$value['kelas']."</td>
-                                        <td>".$value['id_line']."</td>
-                                        <td>
-                                            <a href='detail.php?nim=$value[nim]'>
-                                                <button type=\"button\" class=\"btn btn-default waves-effect\">
-                                                    <i class=\"material-icons\">pageview</i>
-                                                </button>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    ";
-                                }
-                            }
+                            require ("../../fungsi/pendaftaran.php");
+                            view_mhs($connect);
                             ?>
                             </tbody>
                         </table>
