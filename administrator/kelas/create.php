@@ -229,7 +229,7 @@
     <section class="content">
         <div class="container-fluid">
             <!-- Input -->
-            <form id="form_advanced_validation" action="../../fungsi/pendaftaran.php?addKelas=tambah" method="POST">
+            <form id="form_advanced_validation" action="../../fungsi/kurikulum.php?tambahkelas=tambah" method="POST">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="card">

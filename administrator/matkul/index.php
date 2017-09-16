@@ -259,7 +259,7 @@
                                                 <i class=\"material-icons\">edit</i>
                                             </button>
                                         </a>
-                                        <a href='delete.php?kode=$value[kode_matkul]'>
+                                        <a href='../../fungsi/kurikulum.php?hapusmatkul=$value[kode_matkul]'>
                                             <button type=\"button\" class=\"btn btn-danger waves-effect\">
                                                 <i class=\"material-icons\">delete_forever</i>
                                             </button>

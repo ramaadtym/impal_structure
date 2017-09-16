@@ -244,9 +244,9 @@ include "../../koneksi.php";
                             <tbody>
                             <?php
                             // put your code here
-                            require ("../../fungsi/pendaftaran.php");
+                            require ("../../fungsi/SDM.php");
 
-                            view_data_tutor($connect);
+                            tampildatatutor($connect);
                             ?>
                             </tbody>
                         </table>

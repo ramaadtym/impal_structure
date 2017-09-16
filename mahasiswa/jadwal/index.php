@@ -12,21 +12,52 @@
     }
 ?>
 <?php
-    require '../../koneksi.php';
-    if (isset($_SESSION['nim'])) {
-        $search = $_SESSION['nim'];
-        $sql = "SELECT *
+    function tampildetilmahasiswa($nim)
+    {
+        require '../../koneksi.php';
+        if (isset($nim)) {
+            $sql = "SELECT *
                         FROM user
                         JOIN detil_user USING (nim)
-                        WHERE user_level='Mahasiswa' AND nim='$search'";
-        $query = mysqli_query($connect, $sql);
-        if (mysqli_num_rows($query) == 0) {
-            echo '<script>alert("NIM Tidak Sesuai");window.location.href=\'../mahasiswa\';</script>';
+                        WHERE user_level='Mahasiswa' AND nim='$nim'";
+            $query = mysqli_query($connect, $sql);
+            if (mysqli_num_rows($query) == 0) {
+                echo '<script>alert("NIM Tidak Sesuai");window.location.href=\'../mahasiswa\';</script>';
 
+            }
+            $mahasiswa = mysqli_fetch_array($query);
+            $return = array(
+                'mahasiswa' => $mahasiswa,
+                'nim' => $nim
+            );
+            return $return;
         }
-        $mahasiswa = mysqli_fetch_array($query);
-        $nim = $mahasiswa['nim'];
     }
+    function tampildatajadwal($nim){
+        require '../../koneksi.php';
+
+    //GET JADWAL
+    $sql = "
+                            SELECT k.kode_kelas kode_kelas, m.nama_matkul nama_matkul, k.kode_tutor kode_tutor, k.hari hari, k.jam jam, d.nama nama
+                            FROM kelas k
+                            JOIN tutor t ON (t.kode_tutor = k.kode_tutor)
+                            JOIN matkul m ON (m.kode_matkul = k.kode_matkul)
+                            JOIN user u ON (t.nim = u.nim)
+                            JOIN detil_user d ON (u.nim = d.nim)
+                            WHERE k.kode_kelas IN (
+                              SELECT kode_kelas from detail_kelas WHERE nim='$nim'
+                            )";
+    return mysqli_query($connect,$sql);
+}
+
+
+//mengambil data mahasiswa
+$datamahasiswa = tampildetilmahasiswa($_SESSION['nim']);
+if (isset($datamahasiswa)){
+    $mahasiswa = $datamahasiswa['mahasiswa'];
+}
+    //mengambil data jadwal
+$kelas = tampildatajadwal($_SESSION['nim']);
 ?>
 
 <?php
@@ -214,21 +245,6 @@ if (!isset($_SESSION['nim'])) {
                             </thead>
                             <tbody>
                             <?php
-                            // put your code here
-                            require '../../koneksi.php';
-
-                            $sql = "
-                            SELECT k.kode_kelas kode_kelas, m.nama_matkul nama_matkul, k.kode_tutor kode_tutor, k.hari hari, k.jam jam, d.nama nama
-                            FROM kelas k
-                            JOIN tutor t ON (t.kode_tutor = k.kode_tutor)
-                            JOIN matkul m ON (m.kode_matkul = k.kode_matkul)
-                            JOIN user u ON (t.nim = u.nim)
-                            JOIN detil_user d ON (u.nim = d.nim)
-                            WHERE k.kode_kelas IN (
-                              SELECT kode_kelas from detail_kelas WHERE nim='$nim'
-                            )";
-
-                            $kelas = mysqli_query($connect, $sql);
                             if(mysqli_num_rows($kelas) == 0){
                                 //echo '<tr><td colspan="5"><em>Data Tidak Tersedia.</em></td></tr>';
                             } else {

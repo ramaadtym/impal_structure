@@ -3,8 +3,8 @@
 //Konfigurasi Database
 $host = "localhost";
 $user = "root";
-$password = "1202962432";
-$database = "impal";
+$password = "";
+$database = "db_impal";
 
 $connect = mysqli_connect($host, $user, $password, $database);
 

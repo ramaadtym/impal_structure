@@ -242,8 +242,8 @@
                             </thead>
                             <tbody>
                             <?php
-                            require ("../../fungsi/pendaftaran.php");
-                            view_kelas($connect);
+                            require ("../../fungsi/kurikulum.php");
+                            tampildatakelas($connect);
                             ?>
                             </tbody>
                         </table>
