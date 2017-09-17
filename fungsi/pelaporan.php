@@ -7,10 +7,11 @@ if(!isset($_SESSION)){
 /*        require '../../koneksi.php';*/
 
         $sql = "
-                            SELECT kode_tutor, nama, count(*) as jaga FROM absensi
-                            JOIN tutor using (kode_tutor)
-                            JOIN detil_user using (nim)
-                            where admin_acc is not null";
+                            SELECT kode_tutor, nama,  count(*) as jaga FROM absensi
+JOIN tutor using (kode_tutor)
+JOIN detil_user using (nim)
+where admin_acc is not null
+group by kode_tutor";
 
         $mahasiswa = mysqli_query($connect, $sql);
         if(mysqli_num_rows($mahasiswa) > 0){
