@@ -25,3 +25,24 @@ function tampildatatutor($connect){
         }
     }
 }
+function detiltutor($connect){
+
+    require '../../koneksi.php';
+
+    if (!isset($_GET['nim'])) {
+        echo '<script>alert("NIM Tidak Sesuai");window.location.href=\'../tutor\';</script>';
+    } else {
+        $search = $_GET['nim'];
+        $sql = "SELECT *
+                FROM user u
+                JOIN detil_user d ON (u.nim = d.nim)
+                JOIN tutor t ON (u.nim = t.nim)
+                WHERE (u.user_level='Tutor') AND (u.nim='$search')";
+        $query = mysqli_query($connect, $sql);
+        if (mysqli_num_rows($query) == 0) {
+            echo '<script>alert("NIM Tidak Sesuai");window.location.href=\'../tutor\';</script>';
+
+        }
+        $tutor = mysqli_fetch_array($query);
+    }
+}

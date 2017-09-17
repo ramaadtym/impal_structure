@@ -18,7 +18,7 @@ include "../../koneksi.php";
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-    <title>Dashboard - Tutor</title>
+    <title>Dashboard - <?php echo $_SESSION['user_level']; ?></title>
     <!-- Favicon-->
     <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
@@ -133,7 +133,7 @@ include "../../koneksi.php";
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="../mahasiswa">Data Mahasiswa</a>
+                            <a href="javascript:void(0);">Data Mahasiswa</a>
                         </li>
                     </ul>
                 </li>
@@ -165,14 +165,14 @@ include "../../koneksi.php";
                         </li>
                     </ul>
                 </li>
-                <li class="active">
+                <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">school</i>
                         <span>Tutor</span>
                     </a>
                     <ul class="ml-menu">
-                        <li class="active">
-                            <a href="javascript:void(0);">Data Tutor</a>
+                        <li>
+                            <a href="../tutor">Data Tutor</a>
                         </li>
                     </ul>
                 </li>
@@ -190,7 +190,7 @@ include "../../koneksi.php";
                         </li>
                     </ul>
                 </li>
-                <li>
+                <li class="active">
                     <a href="../pelaporan">
                         <i class="material-icons">assignment_turned_in</i><span>Pelaporan Gaji</span>
                     </a>
@@ -213,7 +213,7 @@ include "../../koneksi.php";
         </div>
         <!-- #Menu -->
         <!-- Footer -->
-        <?php include "../../footer.php"; ?>
+        <?php include '../../footer.php' ?>
         <!-- #Footer -->
     </aside>
     <!-- #END# Left Sidebar -->
@@ -225,33 +225,29 @@ include "../../koneksi.php";
 
 <section class="content">
     <div class="container-fluid">
-        <!-- Basic Examples -->
         <div class="row clearfix">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                 <div class="card">
                     <div class="header">
                         <h2>
-                            DATA TUTOR
+                            DATA HONOR TUTOR
                         </h2>
                     </div>
                     <div class="body">
                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                             <thead>
-                                <tr>
-                                    <th>Kode Tutor</th>
-                                    <th>NIM</th>
-                                    <th>Nama</th>
-                                    <th>Mata Kuliah 1</th>
-                                    <th>Mata Kuliah 2</th>
-                                    <th>Aksi</th>
-                                </tr>
+                            <tr>
+                                <th>Kode Tutor</th>
+                                <th>Nama</th>
+                                <th>Banyak Shift</th>
+                                <th>Total Honor</th>
+                            </tr>
                             </thead>
                             <tbody>
                             <?php
                             // put your code here
-                            require ("../../fungsi/SDM.php");
-
-                            tampildatatutor($connect);
+                            require ("../../fungsi/pelaporan.php");
+                            tampildatahonor($connect);
                             ?>
                             </tbody>
                         </table>

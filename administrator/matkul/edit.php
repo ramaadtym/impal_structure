@@ -214,6 +214,11 @@
                         </ul>
                     </li>
                     <li>
+                        <a href="../pelaporan">
+                            <i class="material-icons">assignment_turned_in</i><span>Pelaporan Gaji</span>
+                        </a>
+                    </li>
+                    <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">attachment</i>
                             <span>Lampiran</span>
